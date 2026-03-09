@@ -1,5 +1,5 @@
 /**
- * Root application entry for Shake Happens.
+ * Root application entry for Earthquake Live.
  *
  * This component is intentionally lightweight and delegates actual UI
  * to the screen layer so it remains easy to test and maintain.

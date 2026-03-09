@@ -1,5 +1,5 @@
 /**
- * Central application configuration for Shake Happens.
+ * Central application configuration for Earthquake Live.
  *
  * This module exposes a typed configuration object so the rest of the app
  * does not need to know about `expo-constants` or environment details.

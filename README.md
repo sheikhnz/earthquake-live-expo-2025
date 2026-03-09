@@ -1,6 +1,6 @@
-## Shake Happens
+## Earthquake Live
 
-Shake Happens is an Expo + React Native app that tracks and visualizes real-time earthquakes using the USGS Earthquake Catalog API.
+Earthquake Live is an Expo + React Native app that tracks and visualizes real-time earthquakes using the USGS Earthquake Catalog API.
 
 ### What this project uses
 

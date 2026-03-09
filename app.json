@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Shake Happens",
-    "slug": "shake-happens-expo-2025",
+    "name": "Earthquake Live",
+    "slug": "earthquake-live-expo-2025",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Shake Happens uses your location to prioritize earthquakes near your country."
+        "NSLocationWhenInUseUsageDescription": "Earthquake Live uses your location to prioritize earthquakes near your country."
       }
     },
     "android": {
@@ -25,7 +25,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.sheikhmohdnazmulhasan.shakehappensexpo2025",
+      "package": "com.sheikhmohdnazmulhasan.earthquakeliveexpo2025",
       "config": {
         "googleMaps": {
           "apiKey": "GOOGLEMAPSAPIKEY"

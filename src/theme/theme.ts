@@ -1,5 +1,5 @@
 /**
- * Theme configuration for Shake Happens.
+ * Theme configuration for Earthquake Live.
  *
  * This module defines light and dark themes and a helper to select the
  * appropriate theme based on the device color scheme.
