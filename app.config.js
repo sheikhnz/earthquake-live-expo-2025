@@ -1,0 +1,46 @@
+export const expo = {
+  name: "Earthquake Live",
+  slug: "earthquake-live-expo-2025",
+  version: "1.0.0",
+  orientation: "portrait",
+  icon: "./assets/android/play_store_512.png",
+  userInterfaceStyle: "automatic",
+  newArchEnabled: true,
+  splash: {
+    image: "./assets/splash-icon.png",
+    resizeMode: "contain",
+    backgroundColor: "#ffffff",
+  },
+  ios: {
+    icon: "./assets/ios/AppIcon~ios-marketing.png",
+    supportsTablet: true,
+    infoPlist: {
+      NSLocationWhenInUseUsageDescription: "Earthquake Live uses your location to prioritize earthquakes near your country.",
+    },
+  },
+  android: {
+    adaptiveIcon: {
+      foregroundImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      backgroundImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      monochromeImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+    },
+    edgeToEdgeEnabled: true,
+    predictiveBackGestureEnabled: false,
+    package: "com.averagedevs.earthquakelive",
+    privacyPolicyUrl: "https://play.averagedevs.com/earthquakelive/privacy-policy",
+    config: {
+      googleMaps: {
+        apiKey: process.env.GOOGLE_MAPS_API_KEY,
+      },
+    },
+  },
+  web: {
+    favicon: "./assets/web/favicon.ico",
+  },
+  extra: {
+    eas: {
+      projectId: "200ef69c-4df6-40d9-9966-e36fabc38d6f",
+    },
+  },
+  owner: "sheikhmohdnazmulhasan",
+};
