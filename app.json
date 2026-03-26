@@ -27,7 +27,8 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.sheikhmohdnazmulhasan.earthquakeliveexpo2025",
+      "package": "com.averagedevs.earthquakelive",
+      "privacyPolicyUrl": "https://play.averagedevs.com/earthquakelive/privacy-policy",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyA31DzSoBDtFJfbc72q8-hD6f-8Z1VNiHw"
