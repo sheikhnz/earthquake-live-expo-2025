@@ -27,7 +27,6 @@ export const expo = {
     edgeToEdgeEnabled: true,
     predictiveBackGestureEnabled: false,
     package: "com.averagedevs.earthquakelive",
-    privacyPolicyUrl: "https://play.averagedevs.com/earthquakelive/privacy-policy",
     config: {
       googleMaps: {
         apiKey: process.env.GOOGLE_MAPS_API_KEY,
@@ -43,4 +42,13 @@ export const expo = {
     },
   },
   owner: "sheikhmohdnazmulhasan",
+  plugins: [
+    [
+      "react-native-google-mobile-ads",
+      {
+        androidAppId: "ca-app-pub-4918601710187091~8942225717",
+        iosAppId: "ca-app-pub-3940256099942544~1458002511",
+      },
+    ],
+  ],
 };

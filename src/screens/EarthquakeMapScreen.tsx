@@ -28,6 +28,8 @@ import { useUserLocationRegion } from "../hooks/useUserLocationRegion";
 import type { Earthquake } from "../models/earthquakes";
 import type { CountryOption } from "../models/country";
 import { useAppTheme } from "../hooks/useAppTheme";
+import { BannerAdView } from "../components/BannerAdView";
+import { useInterstitialAd } from "../hooks/useInterstitialAd";
 
 const LOADING_LABEL = "Loading earthquakes...";
 
@@ -42,6 +44,8 @@ export const EarthquakeMapScreen = (): ReactElement => {
   const [manualCountry, setManualCountry] = useState<CountryOption | null>(
     null,
   );
+
+  const { show: showInterstitial } = useInterstitialAd();
 
   const {
     isLoading: isLocationLoading,
@@ -218,6 +222,7 @@ export const EarthquakeMapScreen = (): ReactElement => {
       setManualCountry(country);
       setIsSelectingCountry(false);
       setSelectedEarthquakeId(null);
+      showInterstitial();
 
       if (!mapRef.current) {
         return;
@@ -233,7 +238,7 @@ export const EarthquakeMapScreen = (): ReactElement => {
         500,
       );
     },
-    [mapDefaultZoomDelta],
+    [mapDefaultZoomDelta, showInterstitial],
   );
 
   useEffect(() => {
@@ -291,6 +296,8 @@ export const EarthquakeMapScreen = (): ReactElement => {
           ))}
         </MapView>
       </View>
+
+      <BannerAdView />
 
       <View style={styles.listContainer}>
         {activeCountryLabel ? (

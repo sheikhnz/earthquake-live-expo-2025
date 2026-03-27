@@ -103,12 +103,12 @@ eas build --platform android --profile production
 
 ## 8. Store Listing
 
-| Asset               | Spec             | Status       |
-| -------------------- | ---------------- | ------------ |
-| App icon             | 512×512 PNG      | ✅ Ready      |
-| Feature graphic      | 1024×500 PNG     | ❌ Need to create |
-| Phone screenshots    | Min 2, up to 8   | ❌ Need to capture |
-| Tablet screenshots   | Optional but recommended | ❌ Need to capture |
+| Asset              | Spec                     | Status             |
+| ------------------ | ------------------------ | ------------------ |
+| App icon           | 512×512 PNG              | ✅ Ready           |
+| Feature graphic    | 1024×500 PNG             | ❌ Need to create  |
+| Phone screenshots  | Min 2, up to 8           | ❌ Need to capture |
+| Tablet screenshots | Optional but recommended | ❌ Need to capture |
 
 - [ ] **Short description** — max 80 characters
 - [ ] **Full description** — max 4000 characters
