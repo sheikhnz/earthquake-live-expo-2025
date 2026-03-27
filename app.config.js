@@ -7,7 +7,7 @@ export const expo = {
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
   splash: {
-    image: "./assets/splash-icon.png",
+    image: "./assets/android/play_store_512.png",
     resizeMode: "contain",
     backgroundColor: "#ffffff",
   },
@@ -15,14 +15,18 @@ export const expo = {
     icon: "./assets/ios/AppIcon~ios-marketing.png",
     supportsTablet: true,
     infoPlist: {
-      NSLocationWhenInUseUsageDescription: "Earthquake Live uses your location to prioritize earthquakes near your country.",
+      NSLocationWhenInUseUsageDescription:
+        "Earthquake Live uses your location to prioritize earthquakes near your country.",
     },
   },
   android: {
     adaptiveIcon: {
-      foregroundImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-      backgroundImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_background.png",
-      monochromeImage: "./assets/android/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+      foregroundImage:
+        "./assets/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      backgroundImage:
+        "./assets/android/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      monochromeImage:
+        "./assets/android/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
     },
     edgeToEdgeEnabled: true,
     predictiveBackGestureEnabled: false,
