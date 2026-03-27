@@ -40,15 +40,16 @@ pnpm start
 - **pnpm format**: Format the codebase with Prettier.
 - **pnpm format:check**: Check formatting without writing changes.
 
-### Contributing
+### Build Commands
 
-- **Branching**
-  - Create a feature branch from `main` (for example, `feature/country-selector`).
-- **Code style**
-  - Run `pnpm format` before opening a PR.
-  - Keep React components functional and written in TypeScript.
-- **Commits**
-  - Use clear, descriptive commit messages (for example, `feat: add country selector`).
-- **Pull requests**
-  - Briefly describe the change and any UI impacts.
-  - Mention any new env/config values or scripts that contributors should know about.
+To build the application for Android using EAS (Expo Application Services), use the following commands:
+
+- **Build an AAB (Android App Bundle) for production release / Google Play Console:**
+  ```bash
+  eas build --platform android --profile production
+  ```
+
+- **Build an APK for direct installation onto an Android device or emulator:**
+  ```bash
+  eas build --profile apk --platform android
+  ```
