@@ -50,8 +50,8 @@ export const expo = {
     [
       "react-native-google-mobile-ads",
       {
-        androidAppId: "ca-app-pub-4918601710187091~8942225717",
-        iosAppId: "ca-app-pub-3940256099942544~1458002511",
+        androidAppId: process.env.ADMOB_ANDROID_APP_ID,
+        iosAppId: process.env.ADMOB_IOS_APP_ID,
       },
     ],
   ],
