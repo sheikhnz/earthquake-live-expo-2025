@@ -45,6 +45,7 @@ pnpm start
 To build the application for Android using EAS (Expo Application Services), use the following commands:
 
 - **Build an AAB (Android App Bundle) for production release / Google Play Console:**
+
   ```bash
   eas build --platform android --profile production
   ```
