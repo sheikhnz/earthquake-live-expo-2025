@@ -8,7 +8,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/android/play_store_512.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -48,12 +48,10 @@
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-4918601710187091~8942225717"
+          "androidAppId": "ca-app-pub-4918601710187091~8942225717",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
       ]
     ]
-  },
-  "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-4918601710187091~8942225717"
   }
 }
