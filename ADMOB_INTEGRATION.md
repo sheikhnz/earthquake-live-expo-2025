@@ -22,11 +22,11 @@
 4. Copy your **App ID** (format: `ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY`)
 5. Go to **Ad Units → Add Ad Unit** and create the following:
 
-| Ad Type        | When to Show                          | Recommended Placement                |
-| -------------- | ------------------------------------- | ------------------------------------ |
-| **Banner**     | Always visible                        | Bottom of `EarthquakeMapScreen`      |
-| **Interstitial** | Between actions                     | On country change or app resume      |
-| **Rewarded**   | Optional, user-initiated              | "Remove ads for 1 hour" button       |
+| Ad Type          | When to Show             | Recommended Placement           |
+| ---------------- | ------------------------ | ------------------------------- |
+| **Banner**       | Always visible           | Bottom of `EarthquakeMapScreen` |
+| **Interstitial** | Between actions          | On country change or app resume |
+| **Rewarded**     | Optional, user-initiated | "Remove ads for 1 hour" button  |
 
 6. Copy each **Ad Unit ID** for use in step 3
 
@@ -54,18 +54,18 @@ Add the config plugin **and** your AdMob App IDs at the **root level** of `app.j
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY",
-          "iosAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
-        }
-      ]
-    ]
+          "iosAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY",
+        },
+      ],
+    ],
     // ... rest of your expo config
   },
 
   // ⬇️ This goes OUTSIDE the "expo" key, at root level
   "react-native-google-mobile-ads": {
     "android_app_id": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY",
-    "ios_app_id": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
-  }
+    "ios_app_id": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY",
+  },
 }
 ```
 
@@ -116,9 +116,7 @@ import { TestIds } from "react-native-google-mobile-ads";
 const IS_DEV = __DEV__;
 
 export const AD_UNIT_IDS = {
-  BANNER: IS_DEV
-    ? TestIds.BANNER
-    : "ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY", // your real banner ID
+  BANNER: IS_DEV ? TestIds.BANNER : "ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY", // your real banner ID
 
   INTERSTITIAL: IS_DEV
     ? TestIds.INTERSTITIAL
@@ -141,10 +139,7 @@ Create `src/components/BannerAdView.tsx`:
 ```tsx
 import React, { type ReactElement } from "react";
 import { StyleSheet, View } from "react-native";
-import {
-  BannerAd,
-  BannerAdSize,
-} from "react-native-google-mobile-ads";
+import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
 import { AD_UNIT_IDS } from "../config/adUnitIds";
 
 export const BannerAdView = (): ReactElement => {
@@ -198,10 +193,7 @@ Create `src/hooks/useInterstitialAd.ts`:
 
 ```typescript
 import { useCallback, useEffect, useRef } from "react";
-import {
-  InterstitialAd,
-  AdEventType,
-} from "react-native-google-mobile-ads";
+import { InterstitialAd, AdEventType } from "react-native-google-mobile-ads";
 import { AD_UNIT_IDS } from "../config/adUnitIds";
 
 /**
@@ -395,12 +387,12 @@ src/
 
 These are Google's official test IDs (safe to use during development):
 
-| Type           | Test ID                                  |
-| -------------- | ---------------------------------------- |
-| Banner         | `ca-app-pub-3940256099942544/9214589741` |
-| Interstitial   | `ca-app-pub-3940256099942544/1033173712` |
-| Rewarded       | `ca-app-pub-3940256099942544/5224354917` |
-| App Open       | `ca-app-pub-3940256099942544/9257395921` |
+| Type         | Test ID                                  |
+| ------------ | ---------------------------------------- |
+| Banner       | `ca-app-pub-3940256099942544/9214589741` |
+| Interstitial | `ca-app-pub-3940256099942544/1033173712` |
+| Rewarded     | `ca-app-pub-3940256099942544/5224354917` |
+| App Open     | `ca-app-pub-3940256099942544/9257395921` |
 
 Or simply use the `TestIds` import from `react-native-google-mobile-ads`.
 
@@ -408,13 +400,13 @@ Or simply use the `TestIds` import from `react-native-google-mobile-ads`.
 
 ## Troubleshooting
 
-| Issue | Solution |
-| ----- | -------- |
+| Issue                 | Solution                                                                  |
+| --------------------- | ------------------------------------------------------------------------- |
 | App crashes on launch | Double-check your AdMob App ID in `app.json` — an invalid ID causes crash |
-| Ads not showing | Make sure SDK is initialized before rendering ad components |
-| "No fill" errors | Normal during testing; use `TestIds` to guarantee test ads appear |
-| Build fails | Run `npx expo prebuild --clean` then rebuild with EAS |
-| Expo Go error | AdMob doesn't work in Expo Go — use `eas build --profile development` |
+| Ads not showing       | Make sure SDK is initialized before rendering ad components               |
+| "No fill" errors      | Normal during testing; use `TestIds` to guarantee test ads appear         |
+| Build fails           | Run `npx expo prebuild --clean` then rebuild with EAS                     |
+| Expo Go error         | AdMob doesn't work in Expo Go — use `eas build --profile development`     |
 
 ---
 

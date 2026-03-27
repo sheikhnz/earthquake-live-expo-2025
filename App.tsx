@@ -4,13 +4,18 @@
  * This component is intentionally lightweight and delegates actual UI
  * to the screen layer so it remains easy to test and maintain.
  */
-import React, { type ReactElement } from "react";
+import React, { useEffect, type ReactElement } from "react";
 import { StatusBar, StyleSheet, useColorScheme } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { EarthquakeMapScreen } from "./src/screens/EarthquakeMapScreen";
 import { ThemeProvider } from "./src/theme/ThemeProvider";
+import { initializeAds } from "./src/config/ads";
 
 const App = (): ReactElement => {
+  useEffect(() => {
+    initializeAds();
+  }, []);
+
   const colorScheme = useColorScheme();
   const barStyle = colorScheme === "dark" ? "light-content" : "dark-content";
 

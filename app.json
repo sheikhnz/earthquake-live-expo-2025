@@ -43,6 +43,17 @@
         "projectId": "200ef69c-4df6-40d9-9966-e36fabc38d6f"
       }
     },
-    "owner": "sheikhmohdnazmulhasan"
+    "owner": "sheikhmohdnazmulhasan",
+    "plugins": [
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-4918601710187091~8942225717"
+        }
+      ]
+    ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-4918601710187091~8942225717"
   }
 }
