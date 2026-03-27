@@ -1,9 +1,15 @@
-import React, { type ReactElement } from "react";
+import React, { useState, type ReactElement } from "react";
 import { StyleSheet, View } from "react-native";
 import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
 import { AD_UNIT_IDS } from "../config/adUnitIds";
 
-export const BannerAdView = (): ReactElement => {
+export const BannerAdView = (): ReactElement | null => {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <BannerAd
@@ -13,6 +19,9 @@ export const BannerAdView = (): ReactElement => {
           networkExtras: {
             collapsible: "bottom",
           },
+        }}
+        onAdFailedToLoad={() => {
+          setHasError(true);
         }}
       />
     </View>
